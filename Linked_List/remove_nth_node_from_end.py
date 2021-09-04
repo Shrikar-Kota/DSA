@@ -45,12 +45,21 @@ print()
 
 3rd from last
 
-- move the start pointer 4 steps
+- move the start pointer 3 steps
 
 - start at 5
 
-- now start slow pointer till start reaches end i.e. 2 steps.
-
-- slow.next = None
+- now start slow pointer till start reaches end i.e. 3 steps.
 
 '''
+head = intialize()
+prev = None 
+slow = None
+fast = head
+n = 5
+n -= 1
+while n and fast:
+    fast = fast.next
+    n -= 1
+while fast.next:
+    slow = slow

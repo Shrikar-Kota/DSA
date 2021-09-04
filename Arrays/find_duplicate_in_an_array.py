@@ -42,17 +42,20 @@ Here since numbers dont exceed length of the array, we can treat them as indices
 
 1 2 3 4 2 5 can be interpreted as:
 
-a -> b -> c -> d
+1 -> 2 -> 3 -> 4
      |         |
       ---------
- 
-so next pointer here is equivalent to the (element_value-1) 
 
 '''
 slow = l[0]
-fast = l[slow-1]
-while l[slow-1] != l[fast-1]:
-    slow = l[slow-1]
-    fast = l[fast-1]
-    fast = l[fast-1]
-print(fast, slow)
+fast = l[0]
+while 1:
+    slow = l[slow]
+    fast = l[l[fast]]
+    if slow == fast:
+        break
+slow = l[0]
+while slow != fast:
+    slow = l[slow]
+    fast = l[fast]
+print(fast)
