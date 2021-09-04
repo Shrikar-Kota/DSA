@@ -1,7 +1,7 @@
 '''
 Problem statement:
 
-Sort an array of 0’s 1’s 2’s without using extra space or sorting algo 
+Sort an array of 0’s 1’s without using extra space or sorting algo 
 
 '''
 n = int(input())
