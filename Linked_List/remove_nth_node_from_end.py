@@ -52,14 +52,23 @@ print()
 - now start slow pointer till start reaches end i.e. 3 steps.
 
 '''
-head = intialize()
+head = initialize()
 prev = None 
-slow = None
+slow = head
 fast = head
-n = 5
-n -= 1
-while n and fast:
+n = 3
+while n != 1 and fast:
     fast = fast.next
     n -= 1
+prev = None
 while fast.next:
-    slow = slow
+    prev = slow
+    slow = slow.next
+    fast = fast.next
+if not prev:
+    head = head.next
+else:
+    prev.next = prev.next.next
+while head:
+    print(head.data, end = "\t")
+    head = head.next
